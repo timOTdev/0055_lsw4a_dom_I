@@ -52,7 +52,6 @@ ctaImg.src = siteContent["cta"]["img-src"];
 
 document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
 
-
 // NAVIGATION
 const tagElements = Array.from(document.getElementsByTagName('a'));
 
@@ -84,12 +83,31 @@ document.querySelector('.bottom-content').getElementsByTagName('p')[1].innerText
 
 document.querySelector('.bottom-content').getElementsByTagName('h4')[2].innerText = siteContent["main-content"]["vision-h4"];
 document.querySelector('.bottom-content').getElementsByTagName('p')[2].innerText = siteContent["main-content"]["vision-content"];
+// A better way:
+// let textContentList = document.querySelectorAll(".text-content");
+
+// textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+// textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+// textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+// textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+// textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+// textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+// textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+// textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+// textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+// textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
 
 // CONTACT
 document.querySelector('.contact').getElementsByTagName('h4')[0].innerText = siteContent["contact"]["contact-h4"];
 document.querySelector('.contact').getElementsByTagName('p')[0].innerText = siteContent["contact"]["address"];
 document.querySelector('.contact').getElementsByTagName('p')[1].innerText = siteContent["contact"]["phone"];
 document.querySelector('.contact').getElementsByTagName('p')[2].innerText = siteContent["contact"]["email"];
+// A better way:
+// let contact = document.getElementsByClassName("contact")[0];
+// contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+// contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+// contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+// contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 
 // FOOTER
 document.getElementsByTagName('footer')[0].getElementsByTagName('p')[0].innerText = siteContent["footer"]["copyright"];
@@ -107,6 +125,15 @@ navElement.appendChild(newElement2);
 
 newElement1.innerText = "New 1";
 newElement2.innerText = "New 2";
+// A better way:
+// selectedNavLinks = document.getElementsByTagName("nav")[0];
+// let createNewNode = (name) => {
+//   let newNode = document.createElement("a");
+//   newNode.innerHTML = name;
+//   return newNode;
+// }
+// selectedNavLinks.prepend(createNewNode("Extra Item 1"));
+// selectedNavLinks.append(createNewNode("Extra Item 2"));
 
 // CHANGES TO THE PAGE
 document.querySelector("body").style.backgroundColor = "goldenrod";
